@@ -1,6 +1,7 @@
 #**************************** Management network ******************************
 module "apps_network" {
-  source              = "../terraform-os-network/"
+  #source              = "../terraform-os-network/"
+  source              = "git@github.com:shepherdcloud/terraform-openstack-network.git"
   network_name        = "${var.project_name}-apps-net"
   network_tags        = ["${var.project_name}", "apps", "shepherdcloud"]
   network_description = "${var.network_description}"
